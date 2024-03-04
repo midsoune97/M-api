@@ -18,10 +18,9 @@ require('dotenv').config()
 
 
 //_______________________ ┏  Main Setting  ┓ _______________________\\
-
-creator = '乂 MidSoune 乂' // Nama 
+creator = 'MidSoune' // Nama 
 port = 8080 //port host
-LimitApikey = 20 // Limit Apikey default
+LimitApikey = 100 // Limit Apikey default
 
 //___________ ┏  Database Mongodb Setting  ┓ ___________\\
 
