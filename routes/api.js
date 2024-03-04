@@ -75,8 +75,8 @@ async function limitapikey(apikey) {
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Dowloader  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
 router.get('/api/kora', async (req, res, next) => {
-	
-alip.kora().then(data => {
+	var day = req.query.date
+alip.kora(day).then(data => {
 //	if (!data.Normal_video ) return res.json(loghandler.noturl)
 	limitapikey(req.query.apikey)
 	res.json({
