@@ -74,11 +74,11 @@ async function limitapikey(apikey) {
 
 //―――――――――――――――――――――――――――――――――――――――――― ┏  Dowloader  ┓ ―――――――――――――――――――――――――――――――――――――――――― \\
 
-router.get('/api/midsoune/kora', cekKey, async (req, res, next) => {
+router.get('/api/midsoune/kora', async (req, res, next) => {
 	
 alip.kora().then(data => {
 //	if (!data.Normal_video ) return res.json(loghandler.noturl)
-	limitapikey(req.query.apikey)
+//	limitapikey(req.query.apikey)
 	res.json({
 	status: true,
 	creator: `${creator}`,
