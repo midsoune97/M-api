@@ -34,7 +34,7 @@ servicesmtp = 'Gmail'//Ada gmail ada sendinblue ikut masing2 limit gmail 500 lim
 sendemail = process.env.sendemail //Email SMTP
 fromsendemail = process.env.fromsendemail // From Email SMTP *kalau takde custom email kena sama email dengan Email SMTP
 sendpwmail = process.env.sendpwmail // Password Email SMTP
-domain = 'mapir-813c1496ddd2.herokuapp.com'// domain website tanpa http or https
+domain = 'm-api-igok.onrender.com'// domain website tanpa http or https
 
 //_______________________ ┏  Apikey  ┓ _______________________\\
 
