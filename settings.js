@@ -21,11 +21,11 @@ require('dotenv').config()
 
 creator = '乂 MidSoune 乂' // Nama 
 port = 8080 //port host
-LimitApikey = 200 // Limit Apikey default
+LimitApikey = 20 // Limit Apikey default
 
 //___________ ┏  Database Mongodb Setting  ┓ ___________\\
 
-keymongodb = 'mongodb+srv://midsoune10:ouahs97soune@midsoune.ufvrwc4.mongodb.net/?retryWrites=true&w=majority'
+keymongodb = "mongodb+srv://midsoune10:ouahs97soune@midsoune.ufvrwc4.mongodb.net/?retryWrites=true&w=majority&appName=midsoune";
 //___________ ┏  SMTP Setting  ┓ ___________\\
 
 //note service SMTP Gmail Tidak Boleh Send Kat Temp Email Kalau mahu pakai temp email buat di service lain
