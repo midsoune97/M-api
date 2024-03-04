@@ -30,6 +30,7 @@
   "homepage": "https://github.com/AlipBot/Api-Alpis#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "moment": "2.29.1",
     "bcryptjs": "^2.4.3",
     "bitly": "^7.1.2",
     "body-parser": "^1.20.1",
