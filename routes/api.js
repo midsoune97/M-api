@@ -1715,7 +1715,7 @@ router.get('/api/info/githubstalk', cekKey, async (req, res, next) => {
 
 })
 
-router.get('/api/info/waktuksolatmy', cekKey, async (req, res, next) => {
+router.get('/api/info/salat', cekKey, async (req, res, next) => {
   var q = req.query.mdina
 	alip.watuksolatmy(q)
 	.then(data => {
