@@ -1716,7 +1716,8 @@ router.get('/api/info/githubstalk', cekKey, async (req, res, next) => {
 })
 
 router.get('/api/info/waktuksolatmy', cekKey, async (req, res, next) => {
-	alip.watuksolatmy()
+  var q = req.query.mdina
+	alip.watuksolatmy(q)
 	.then(data => {
 		if (!data.Tarikh ) return res.json(loghandler.error)
 		limitapikey(req.query.apikey)
