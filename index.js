@@ -50,7 +50,7 @@ async function ResetRequestToday() {
 //_______________________ ┏ Code ┓ _______________________\\
 
 (cors = require("cors")), (secure = require("ssl-express-www"));
-app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
+app.use(favicon(path.join(__dirname, "public", "images", "icon.png")));
 var main = require("./routes/main"),
   api = require("./routes/api");
 app.set("view engine", "ejs");
