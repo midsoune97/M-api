@@ -55,11 +55,11 @@ async function cekKey(req, res, next) {
 
     let db = await User.findOne({apikey: apikey});
     if(db === null) {
-		return res.json({ status : false, creator : `${creator}`, message : "[!] Apikey Tidak Wujud"})  
+		return res.json({ status : false, creator : `${creator}`, message : "[!] Apikey Doesn't Exist"})  
 		} else if(!db.isVerified) {
-				return res.json({ status : false, creator : `${creator}`, message : "[!] Sila Verify Email dulu sebelum guna apikey"})  
+				return res.json({ status : false, creator : `${creator}`, message : "[!] Please verify email first before using apikey"})  
 			} else if(db.limitApikey === 0) {
-				return res.json({ status : false, creator : `${creator}`, message : "[!] Apikey Sudah Habis"})  
+				return res.json({ status : false, creator : `${creator}`, message : "[!] Apikey is dead"})  
 			}else{
         return next();
     }
@@ -1717,17 +1717,17 @@ router.get('/api/info/githubstalk', cekKey, async (req, res, next) => {
 
 router.get('/api/info/salat', cekKey, async (req, res, next) => {
   var q = req.query.mdina
-	alip.watuksolatmy(q)
+	alip.salat(q)
 	.then(data => {
 		if (!data.Tarikh ) return res.json(loghandler.error)
 		limitapikey(req.query.apikey)
 		res.json({
-			status: true,
+                status: true,
 	        creator: `${creator}`,
-			result: data
+		result: data
 		})
 		}).catch(e => {
-			 res.json(loghandler.error)
+		 res.json(loghandler.error)
 })
 })
 
