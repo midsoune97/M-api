@@ -51,13 +51,13 @@ const router = express.Router()
 
 async function cekKey(req, res, next) {
 	var apikey = req.query.apikey
-	if (!apikey ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter apikey"})  
+	if (!apikey ) return res.json({ status : false, creator : `${creator}`, message : "[!] Enter your ApiKey"})  
 
     let db = await User.findOne({apikey: apikey});
     if(db === null) {
-		return res.json({ status : false, creator : `${creator}`, message : "[!] Apikey Doesn't Exist"})  
+		return res.json({ status : false, creator : `${creator}`, message : "[!] ApiKey Doesn't Exist"})  
 		} else if(!db.isVerified) {
-				return res.json({ status : false, creator : `${creator}`, message : "[!] Please verify email first before using apikey"})  
+				return res.json({ status : false, creator : `${creator}`, message : "[!] Please verify email first before using Apikey"})  
 			} else if(db.limitApikey === 0) {
 				return res.json({ status : false, creator : `${creator}`, message : "[!] Apikey is dead"})  
 			}else{
